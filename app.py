@@ -26,7 +26,9 @@ class Response(BaseModel):
 async def startup_event():
     global rag_processor
     rag_processor = RAGProcessor()
-    # Load the documetn i.e scope_final.txt
+    # Load your desired document 
+    # for my case it is scope_final.txt 
+    # you can change as per your document name 
     if os.path.exists("scope_final.txt"):
         rag_processor.load_text("scope_final.txt")
     else:
